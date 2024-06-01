@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/InazumaV/V2bX/api/panel"
+	"github.com/QuLOVE/V2bX-English/api/panel"
 	log "github.com/sirupsen/logrus"
 )
 

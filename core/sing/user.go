@@ -4,9 +4,9 @@ import (
 	"encoding/base64"
 	"errors"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/common/counter"
-	"github.com/InazumaV/V2bX/core"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/common/counter"
+	"github.com/QuLOVE/V2bX-English/core"
 	"github.com/sagernet/sing-box/inbound"
 	"github.com/sagernet/sing-box/option"
 )

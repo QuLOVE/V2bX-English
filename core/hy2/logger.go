@@ -5,7 +5,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/InazumaV/V2bX/limiter"
+	"github.com/QuLOVE/V2bX-English/limiter"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

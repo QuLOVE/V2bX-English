@@ -11,7 +11,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/InazumaV/V2bX/common/file"
+	"github.com/QuLOVE/V2bX-English/common/file"
 	log "github.com/sirupsen/logrus"
 )
 

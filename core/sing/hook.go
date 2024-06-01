@@ -8,12 +8,12 @@ import (
 
 	"github.com/sagernet/sing-box/common/urltest"
 
-	"github.com/InazumaV/V2bX/common/format"
-	"github.com/InazumaV/V2bX/common/rate"
+	"github.com/QuLOVE/V2bX-English/common/format"
+	"github.com/QuLOVE/V2bX-English/common/rate"
 
-	"github.com/InazumaV/V2bX/limiter"
+	"github.com/QuLOVE/V2bX-English/limiter"
 
-	"github.com/InazumaV/V2bX/common/counter"
+	"github.com/QuLOVE/V2bX-English/common/counter"
 	"github.com/sagernet/sing-box/adapter"
 	"github.com/sagernet/sing-box/log"
 	N "github.com/sagernet/sing/common/network"

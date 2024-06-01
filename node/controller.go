@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/common/task"
-	"github.com/InazumaV/V2bX/conf"
-	vCore "github.com/InazumaV/V2bX/core"
-	"github.com/InazumaV/V2bX/limiter"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/common/task"
+	"github.com/QuLOVE/V2bX-English/conf"
+	vCore "github.com/QuLOVE/V2bX-English/core"
+	"github.com/QuLOVE/V2bX-English/limiter"
 	log "github.com/sirupsen/logrus"
 )
 

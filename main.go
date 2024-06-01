@@ -4,7 +4,7 @@ import (
 	//"net/http"
 	//_ "net/http/pprof"
 
-	"github.com/InazumaV/V2bX/cmd"
+	"github.com/QuLOVE/V2bX-English/cmd"
 )
 
 func main() {

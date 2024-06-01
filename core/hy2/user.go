@@ -4,9 +4,9 @@ import (
 	"net"
 	"sync"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/common/counter"
-	vCore "github.com/InazumaV/V2bX/core"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/common/counter"
+	vCore "github.com/QuLOVE/V2bX-English/core"
 	"github.com/apernet/hysteria/core/server"
 )
 

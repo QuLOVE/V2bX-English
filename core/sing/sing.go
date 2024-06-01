@@ -8,8 +8,8 @@ import (
 
 	"github.com/sagernet/sing-box/log"
 
-	"github.com/InazumaV/V2bX/conf"
-	vCore "github.com/InazumaV/V2bX/core"
+	"github.com/QuLOVE/V2bX-English/conf"
+	vCore "github.com/QuLOVE/V2bX-English/core"
 	"github.com/goccy/go-json"
 	box "github.com/sagernet/sing-box"
 	"github.com/sagernet/sing-box/adapter"

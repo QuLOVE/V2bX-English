@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/InazumaV/V2bX/common/exec"
+	"github.com/QuLOVE/V2bX-English/common/exec"
 	"github.com/spf13/cobra"
 )
 
@@ -37,7 +37,7 @@ func init() {
 
 func uninstallHandle(_ *cobra.Command, _ []string) {
 	var yes string
-	fmt.Println(Are you sure to uninstall V2bX? (Y/n)"))
+	fmt.Println("Are you sure to uninstall V2bX? (Y/n)")
 	fmt.Scan(&yes)
 	if strings.ToLower(yes) != "y" {
 		fmt.Println("Uninstallation cancelled")
