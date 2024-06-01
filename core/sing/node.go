@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/conf"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/conf"
 	"github.com/goccy/go-json"
 	"github.com/sagernet/sing-box/inbound"
 	"github.com/sagernet/sing-box/option"

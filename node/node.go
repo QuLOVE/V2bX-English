@@ -3,9 +3,9 @@ package node
 import (
 	"fmt"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/conf"
-	vCore "github.com/InazumaV/V2bX/core"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/conf"
+	vCore "github.com/QuLOVE/V2bX-English/core"
 )
 
 type Node struct {

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/InazumaV/V2bX/common/crypt"
+	"github.com/QuLOVE/V2bX-English/common/crypt"
 	"github.com/goccy/go-json"
 )
 

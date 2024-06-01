@@ -3,7 +3,7 @@ package hy2
 import (
 	"sync"
 
-	"github.com/InazumaV/V2bX/common/counter"
+	"github.com/QuLOVE/V2bX-English/common/counter"
 )
 
 type HookServer struct {

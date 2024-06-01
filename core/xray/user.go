@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/common/format"
-	vCore "github.com/InazumaV/V2bX/core"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/common/format"
+	vCore "github.com/QuLOVE/V2bX-English/core"
 	"github.com/xtls/xray-core/common/protocol"
 	"github.com/xtls/xray-core/proxy"
 )

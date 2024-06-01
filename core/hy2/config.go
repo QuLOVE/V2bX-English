@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/conf"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/conf"
 	"github.com/apernet/hysteria/core/server"
 	"github.com/apernet/hysteria/extras/correctnet"
 	"github.com/apernet/hysteria/extras/masq"

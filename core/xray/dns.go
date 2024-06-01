@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/InazumaV/V2bX/api/panel"
+	"github.com/QuLOVE/V2bX-English/api/panel"
 	"github.com/goccy/go-json"
 	log "github.com/sirupsen/logrus"
 	coreConf "github.com/xtls/xray-core/infra/conf"

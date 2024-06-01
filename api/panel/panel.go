@@ -9,7 +9,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/InazumaV/V2bX/conf"
+	"github.com/QuLOVE/V2bX-English/conf"
 	"github.com/go-resty/resty/v2"
 )
 

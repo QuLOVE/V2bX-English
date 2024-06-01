@@ -1,4 +1,4 @@
-module github.com/InazumaV/V2bX
+module github.com/QuLOVE/V2bX-English
 
 go 1.22
 

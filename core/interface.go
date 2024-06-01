@@ -1,8 +1,8 @@
 package core
 
 import (
-	"github.com/InazumaV/V2bX/api/panel"
-	"github.com/InazumaV/V2bX/conf"
+	"github.com/QuLOVE/V2bX-English/api/panel"
+	"github.com/QuLOVE/V2bX-English/conf"
 )
 
 type AddUsersParams struct {

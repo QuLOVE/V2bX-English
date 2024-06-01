@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/InazumaV/V2bX/conf"
+	"github.com/QuLOVE/V2bX-English/conf"
 	"github.com/sagernet/sing-box/option"
 )
 
