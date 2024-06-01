@@ -37,15 +37,15 @@ func init() {
 
 func uninstallHandle(_ *cobra.Command, _ []string) {
 	var yes string
-	fmt.Println(Warn("确定要卸载 V2bX 吗?(Y/n)"))
+	fmt.Println(Are you sure to uninstall V2bX? (Y/n)"))
 	fmt.Scan(&yes)
 	if strings.ToLower(yes) != "y" {
-		fmt.Println("已取消卸载")
+		fmt.Println("Uninstallation cancelled")
 	}
 	_, err := exec.RunCommandByShell("systemctl stop V2bX&&systemctl disable V2bX")
 	if err != nil {
 		fmt.Println(Err("exec cmd error: ", err))
-		fmt.Println(Err("卸载失败"))
+		fmt.Println(Err("Uninstall failed"))
 		return
 	}
 	_ = os.RemoveAll("/etc/systemd/system/V2bX.service")
@@ -55,8 +55,8 @@ func uninstallHandle(_ *cobra.Command, _ []string) {
 	_, err = exec.RunCommandByShell("systemctl daemon-reload&&systemctl reset-failed")
 	if err != nil {
 		fmt.Println(Err("exec cmd error: ", err))
-		fmt.Println(Err("卸载失败"))
+		fmt.Println(Err("Uninstall failed"))
 		return
 	}
-	fmt.Println(Ok("卸载成功"))
+	fmt.Println(Ok("Uninstall successful"))
 }

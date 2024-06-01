@@ -1,35 +1,35 @@
 {
   "Log": {
-    // V2bX 的日志配置，独立于各 Core 的 log 配置
+    // Log configuration for V2bX, independent of the log configuration of each core
 
-    // 日志等级，info, warn, error, none
+    // Log level, info, warn, error, none
     "Level": "error",
-    // 日志输出路径，默认输出到标准输出
+    // Log output path, default output to standard output
     "Output": ""
   },
   "Cores": [
     {
-      // Core类型
+      // Core type
       "Type": "sing",
-      // Core标识名，可选，如果需要启动多个同类型内核则必填
+      // Core identifier, optional, required if you need to start multiple kernels of the same type
       "Name": "sing1",
       "Log": {
-        // 同 SingBox log 部分配置
+        // Same as SingBox log section configuration
 
         "Level": "error",
         "Timestamp": true
       },
       "NTP": {
-        // 同 SingBox ntp 部分配置
-        // VMess VLESS 建议开启
+        // Same as SingBox ntp section configuration
+        // VMess VLESS is recommended to be enabled
         "Enable": true,
         "Server": "time.apple.com",
         "ServerPort": 0
       },
       "DnsConfigPath": "/etc/V2bX/dns.json",
-      // SingBox源配置文件目录，用于引用标准SingBox配置文件
+      // SingBox source configuration file directory, used to reference the standard SingBox configuration file
       "OriginalPath": "/etc/V2bX/sing_origin.json",
-      // 在删除用户时清理已建立的连接
+      // Clean up established connections when deleting users
       "EnableConnClear": false,
     },
     {
@@ -43,19 +43,19 @@
     {
       "Type": "xray",
       "Log": {
-        // 同 Xray-core log 部分配置
+        // Same as Xray-core log section configuration
 
         "Level": "error"
       },
-      // 静态资源文件目录
+      // Static resource file directory
       "AssetPath": "",
-      // DNS配置文件目录
+      // DNS configuration file directory
       "DnsConfigPath": "",
-      // 路由配置文件目录
+      // Routing configuration file directory
       "RouteConfigPath": "",
-      // 本地策略相关配置
+      // Local policy related configuration
       "ConnectionConfig": {
-        // 详见 https://xtls.github.io/config/policy.html#levelpolicyobject
+        // For details, see https://xtls.github.io/config/policy.html#levelpolicyobject
 
         "handshake": 4,
         "connIdle": 300,
@@ -65,127 +65,127 @@
         "statsUserDownlink": false,
         "bufferSize": 4
       },
-      // Inbound配置文件目录
+      // Inbound configuration file directory
       "InboundConfigPath": "",
-      // Outbound配置文件目录
+      // Outbound configuration file directory
       "OutboundConfigPath": ""
     }
   ],
   "Nodes": [
-    // Node配置有两种写法
+    //  There are two ways to write Node configuration
     {
-      // 写法1
-      // sing内核
+      // Writing method 1
+      // Sing kernel
 
-      // Node标识名，便于查看日志，不填将通过下发的节点配置自动生成
-      // 务必注意不要重复，否则会出现问题
+      // Node identifier, easy to view logs, if not filled, it will be automatically generated through the issued node configuration
+      // Be sure not to repeat, otherwise there will be problems
       "Name": "sing_node1",
 
-      // 要使用的Core的类型
-      // 如果填写了CoreName可不填，但单内核务必填写
-      // 建议视情况填写Core和CoreName其中一个，如果均没有填写将随机选择支持的内核
+      // Type of Core to use
+      // If CoreName is filled in, it can be left blank, but it must be filled in for a single kernel.
+      // It is recommended to fill in one of Core and CoreName according to the situation. If neither is filled in, a supported kernel will be randomly selected.
       "Core": "sing",
 
-      // 要使用的Core的标识名，如果没有定义多个同类型内核可不填
+      // Identifier of the Core to use, if not defined, multiple kernels of the same type can be left blank
       "CoreName": "sing1",
 
-      // API接口地址
+      // API interface address
       "ApiHost": "http://127.0.0.1",
 
-      // API密钥，即Token
+      // API key, i.e. Token
       "ApiKey": "test",
 
-      // 节点ID
+      // Node ID
       "NodeID": 33,
 
-      // 节点类型
+      // Node type
       "NodeType": "shadowsocks",
 
-      // 请求超时时间
+      // Request timeout period
       "Timeout": 30,
 
-      // 监听IP
+      // Listening IP
       "ListenIP": "0.0.0.0",
 
-      // 发送IP
+      // Sending IP
       "SendIP": "0.0.0.0",
 
-      // 开启 Proxy Protocol，参见 https://github.com/haproxy/haproxy/blob/master/doc/proxy-protocol.txt
+      // Enable Proxy Protocol, see https://github.com/haproxy/haproxy/blob/master/doc/proxy-protocol.txt
       "EnableProxyProtocol": false,
 
-      // 开启 TCP Fast Open
+      // Enable TCP Fast Open
       "EnableTFO": true,
 
-      // 开启 DNS
+      // Enable DNS
       "EnableDNS" : true,
-      // 设置 Domain Strategy 需要开启 DNS ，默认 AsIS
-      // 可选 prefer_ipv4 / prefer_ipv6 / ipv4_only / ipv6_only
+      // Setting Domain Strategy requires enabling DNS, default AsIS
+      // Optional prefer_ipv4 / prefer_ipv6 / ipv4_only / ipv6_only
       "DomainStrategy": "ipv4_only",
 
-      // 限制器相关配置
+      // Limiter related configuration
       "LimitConfig": {
-        // 开启实时连接数及IP数限制
+        // Enable real-time connection count and IP count limit
         "EnableRealtime": false,
 
-        // 用户速度限制
+        // User speed limit
         "SpeedLimit": 0,
 
-        // 用户IP限制
+        // User IP limit
         "IPLimit": 0,
 
-        // 用户连接数限制
+        // User connection limit
         "ConnLimit": 0,
 
-        // 开启动态限速
+        // Enable dynamic speed limit
         "EnableDynamicSpeedLimit": false,
 
-        // 动态限速相关配置
+        // Dynamic speed limit related configuration
         "DynamicSpeedLimitConfig": {
-          // 检查周期
+          // Check cycle
           "Periodic": 60,
 
-          // 检查周期内触发限制的流量数
+          // Number of traffic flows that trigger restrictions within the check cycle
           "Traffic": 1000,
 
-          // 触发限制后的速度限制
+          // Speed limit after triggering the limit
           "SpeedLimit": 100,
 
-          // 速度限制过期时间
+          // Speed limit expiration time
           "ExpireTime": 60
 
         }
       },
 
-      // 证书相关配置
+      // Certificate related configuration
       "CertConfig": {
-        // 证书申请模式，none、http、dns、self
+        // Certificate application mode, none, http, dns, self
         "CertMode": "none",
 
         "RejectUnknownSni": false,
 
-        // 证书域名
+        // Certificate domain name
         "CertDomain": "test.com",
 
-        // 证书文件目录
+        // Certificate file directory
         "CertFile": "/etc/V2bX/cert/1.pem",
 
-        // 密钥文件目录
+        // Key file directory
         "KeyFile": "/etc/V2bX/cert/1.key",
 
-        // 申请证书时使用的用户邮箱
+        // User mailbox used when applying for a certificate
         "Email": "1@test.com",
 
-        // DNS解析提供者
+        // DNS resolver provider
         "Provider": "cloudflare",
 
-        // DNS解析提供者的环境变量，详见 https://go-acme.github.io/lego/dns/
+        // Environment variables of the DNS resolver provider, see https://go-acme.github.io/lego/dns/ for details
         "DNSEnv": {
           "EnvName": "env1"
         }
       }
     },
     {
-      // xray内核
+      // Xray kernel
 
       "Name": "xray_node1",
       "Core": "xray",
@@ -199,29 +199,29 @@
       "SendIP": "0.0.0.0",
       "EnableProxyProtocol": true,
       "EnableTFO": true,
-      // 以上同 sing
+      // Same as sing above
 
-      // 开启自定义DNS
+      // Enable custom DNS
       "EnableDNS": false,
 
-      // DNS解析类型，AsIs、UseIP、UseIPv4、UseIPv6
+      // DNS resolution type, AsIs, UseIP, UseIPv4, UseIPv6
       "DNSType": "AsIs",
 
-      // 开启udp over tcp
+      // Enable udp over tcp
       "EnableUot": false,
 
-      // 禁用IVCheck
+      // Disable IVCheck
       "DisableIVCheck": false,
 
-      // 禁用嗅探
+      // Disable sniffing
       "DisableSniffing": false,
 
-      // 开启回落
+      // Enable fallback
       "EnableFallback": false,
 
-      // 回落相关配置
+      // Fallback related configuration
       "FallBackConfigs":{
-        // 详见 https://xtls.github.io/config/features/fallback.html#fallbackobject
+        // For details, see https://xtls.github.io/config/features/fallback.html#fallbackobject
 
         "SNI": "",
         "Alpn": "",
@@ -231,16 +231,16 @@
       }
     },
     {
-      // 写法2
+      // Writing method 2
 
-      // 类似旧配置文件 ApiConfig 部分
+      // Similar to the ApiConfig section of the old configuration file
       "ApiConfig": {
         "ApiHost": "http://127.0.0.1",
         "ApiKey": "test",
         "NodeID": 33,
         "Timeout": 30
       },
-      // 类似旧配置文件 ControllerConfig 部分
+      // Similar to the ControllerConfig section of the old configuration file
       "Options": {
         "Core": "sing",
         "EnableProxyProtocol": true,
@@ -250,11 +250,11 @@
       }
     },
     {
-      // 引用本地其他配置文件
+      // Reference other local configuration files
       "Include": "../example/config_full_node1.json"
     },
     {
-      // 通过Http引用远端配置文件
+      // Reference remote configuration files via Http
       "Include": "http://127.0.0.1:11451/config_full_node1.json"
     }
   ]

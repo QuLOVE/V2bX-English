@@ -33,17 +33,17 @@ func executeX25519() {
 	var privateKey []byte
 	var publicKey []byte
 	var yes, key string
-	fmt.Println("要基于节点信息生成密钥吗?(Y/n)")
+	fmt.Println("Do you want to generate keys based on node information?(Y/n)")
 	fmt.Scan(&yes)
 	if strings.ToLower(yes) == "y" {
 		var temp string
-		fmt.Println("请输入节点id:")
+		fmt.Println("Please enter Node ID:")
 		fmt.Scan(&temp)
 		key = temp
-		fmt.Println("请输入节点类型:")
+		fmt.Println("Please enter Node type:")
 		fmt.Scan(&temp)
 		key += strings.ToLower(temp)
-		fmt.Println("请输入Token:")
+		fmt.Println("Please enter a Token:")
 		fmt.Scan(&temp)
 		key += temp
 		privateKey = crypt.GenX25519Private([]byte(key))

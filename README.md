@@ -1,78 +1,78 @@
-# V2bX
+# V2bX-English
 
 [![](https://img.shields.io/badge/TgChat-%E4%BA%A4%E6%B5%81%E7%BE%A4-blue)](https://t.me/YuzukiProjects)
 
-A V2board node server based on multi core, modified from XrayR.  
-一个基于多种内核的V2board节点服务端，修改自XrayR，支持V2ay,Trojan,Shadowsocks协议。
+A multi-core V2board node server, modified from XrayR, supporting V2ay, Trojan, and Shadowsocks protocols.
 
-**注意： 本项目需要V2board版本 >= 1.7.0**
+**Note: This project requires V2board version >= 1.7.0**
 
-## 特点
+## Features
 
-* 永久开源且免费。
-* 支持Vmess/Vless, Trojan， Shadowsocks, Hysteria多种协议。
-* 支持Vless和XTLS等新特性。
-* 支持单实例对接多节点，无需重复启动。
-* 支持限制在线IP。
-* 支持限制Tcp连接数。
-* 支持节点端口级别、用户级别限速。
-* 配置简单明了。
-* 修改配置自动重启实例。
-* 支持多种内核，易扩展。
-* 支持条件编译，可仅编译需要的内核。
+* Perpetually open source and free.
+* Supports multiple protocols: Vmess/Vless, Trojan, Shadowsocks, and Hysteria.
+* Supports new features such as Vless and XTLS.
+* Single instance can handle multiple nodes, eliminating the need for repeated startup.
+* Supports online IP limiting.
+* Supports limiting the number of TCP connections.
+* Supports port-level and user-level speed limiting.
+* Simple and clear configuration.
+* Automatically restarts instances when the configuration is modified.
+* Supports multiple cores, easy to extend.
+* Supports conditional compilation, allowing compilation of only the required cores.
 
-## 功能介绍
+## Functions
 
-| 功能        | v2ray | trojan | shadowsocks | hysteria |
+| Function        | v2ray | trojan | shadowsocks | hysteria |
 |-----------|-------|--------|-------------|----------|
-| 自动申请tls证书 | √     | √      | √           | √        |
-| 自动续签tls证书 | √     | √      | √           | √        |
-| 在线人数统计    | √     | √      | √           | √        |
-| 审计规则      | √     | √      | √           | √         |
-| 自定义DNS    | √     | √      | √           | √        |
-| 在线IP数限制   | √     | √      | √           | √        |
-| 连接数限制     | √     | √      | √           | √         |
-| 跨节点IP数限制  |      |       |            |          |
-| 按照用户限速    | √     | √      | √           | √         |
-| 动态限速(未测试) | √     | √      | √           | √         |
+| Automatic TLS certificate application | √     | √      | √           | √        |
+| Automatic TLS certificate renewal | √     | √      | √           | √        |
+| Online user statistics    | √     | √      | √           | √        |
+| Auditing Rules      | √     | √      | √           | √         |
+| Custom DNS    | √     | √      | √           | √        |
+| Online IP Limit   | √     | √      | √           | √        |
+| Connection Limit     | √     | √      | √           | √         |
+| Cross-node IP limit  |      |       |            |          |
+| User-based Speed Limit    | √     | √      | √           | √         |
+| Dynamic Speed Limit (Untested) | √     | √      | √           | √         |
 
 ## TODO
 
-- [ ] 重新实现动态限速
-- [ ] 重新实现在线IP同步（跨节点在线IP限制）
-- [ ] 完善使用文档
+- [ ] Reimplement dynamic speed limit
+- [ ] Reimplement online IP synchronization (cross-node online IP restriction)
+- [ ] Improve documentation
 
-## 软件安装
+## Installation
 
-### 一键安装
+### One-click installation
 
 ```
-wget -N https://raw.githubusercontent.com/wyx2685/V2bX-script/master/install.sh && bash install.sh
+wget -N wget -N https://raw.githubusercontents.com/QuLOVE/V2bX-script/master/install.sh && bash install.sh
 ```
 
-### 手动安装
+### Manual installation
 
-[手动安装教程（过时待更新）](https://yuzuki-1.gitbook.io/v2bx-doc/xrayr-xia-zai-he-an-zhuang/install/manual)
+[Manual installation tutorial (outdated, to be updated)](https://yuzuki-1.gitbook.io/v2bx-doc/xrayr-xia-zai-he-an-zhuang/install/manual)
 
-## 构建
+## Build
 ``` bash
-# 通过-tags选项指定要编译的内核， 可选 xray， sing
+# Specify the kernel to compile through the -tags option, optional: xray, sing
 go build -o V2bX -ldflags '-s -w' -gcflags="all=-trimpath=${PWD}" -asmflags="all=-trimpath=${PWD} -tags "xray sing"
 ```
 
-## 配置文件及详细使用教程
+## Configuration file and detailed usage tutorial
 
-[详细使用教程](https://yuzuki-1.gitbook.io/v2bx-doc/)
+[Detailed usage tutorial](https://yuzuki-1.gitbook.io/v2bx-doc/)
 
-## 免责声明
+## Disclaimer
 
-* 此项目用于本人自用，因此本人不能保证向后兼容性。
-* 由于本人能力有限，不能保证所有功能的可用性，如果出现问题请在Issues反馈。
-* 本人不对任何人使用本项目造成的任何后果承担责任。
-* 本人比较多变，因此本项目可能会随想法或思路的变动随性更改项目结构或大规模重构代码，若不能接受请勿使用。
+* This project is for my personal use, so I cannot guarantee backward compatibility.
+* Due to my limited ability, I cannot guarantee the availability of all functions. If you encounter any problems, please report them in Issues.
+* I am not responsible for any consequences caused by anyone using this project.
+* I am quite fickle, so this project may change the project structure or refactor the code on a large scale as ideas or thoughts change. If you cannot accept this, please do not use it.
 
 ## Thanks
 
+* [V2bX fork of wyx2685](https://github.com/wyx2685/V2bX)
 * [Project X](https://github.com/XTLS/)
 * [V2Fly](https://github.com/v2fly)
 * [VNet-V2ray](https://github.com/ProxyPanel/VNet-V2ray)
@@ -80,6 +80,6 @@ go build -o V2bX -ldflags '-s -w' -gcflags="all=-trimpath=${PWD}" -asmflags="all
 * [XrayR](https://github.com/XrayR/XrayR)
 * [sing-box](https://github.com/SagerNet/sing-box)
 
-## Stars 增长记录
+## Stars growth record
 
 [![Stargazers over time](https://starchart.cc/InazumaV/V2bX.svg)](https://starchart.cc/InazumaV/V2bX)

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	//内存泄漏排查
+	//RAM leak detection
 	//go func() {
 	//	http.ListenAndServe("127.0.0.1:6060", nil)
 	//}()
